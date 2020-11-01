@@ -1,15 +1,15 @@
-import argparse
-import os
-import shutil
-import time
-from pathlib import Path
+import argparse             # command line
+import os                   # importing function for interacting with operating system
+import shutil               # enables us to operate with file objects
+import time                 # to represent time
+from pathlib import Path    # for manipulating paths
 
-import cv2
-import torch
-import torch.backends.cudnn as cudnn
-from numpy import random
+import cv2                  # import OpenCV
+import torch                # Open source ML library (based on Lua programming)
+import torch.backends.cudnn as cudnn        #
+from numpy import random        # to generate random numbers from numpy
 
-from models.experimental import attempt_load
+from models.experimental import attempt_load    
 from utils.datasets import LoadStreams, LoadImages
 from utils.general import (
     check_img_size, non_max_suppression, apply_classifier, scale_coords,
